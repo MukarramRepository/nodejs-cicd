@@ -142,6 +142,8 @@ resource "aws_instance" "node_server" {
   ami           = "ami-0c3389a4fa5bddaad"
   instance_type = var.instance_type
 
+  key_name = "node-key" 
+
   subnet_id = aws_subnet.main_subnet.id
 
   vpc_security_group_ids = [
@@ -179,7 +181,7 @@ resource "aws_instance" "node_server" {
 
 resource "aws_secretsmanager_secret" "node_secret" {
 
-  name = "${var.environment}-nodejs-app-secret"
+  name = "${var.environment}-nodejs-app-secret-v2"
 
 }
 

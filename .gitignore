@@ -3,6 +3,7 @@ terraform/.terraform/
 terraform/*.tfstate
 terraform/*.tfstate.backup
 terraform/.terraform.lock.hcl
+terraform/node-key.pem
 
 # Node.js
 node_modules/
